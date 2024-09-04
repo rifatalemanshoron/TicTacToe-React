@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 8000
 const httpServer = createServer();
 const io = new Server(httpServer, {
   cors: {
-    origin: "http://tictactoereactbyshoron.netlify.app", //"http://localhost:5173/" <= Dont Write link this way
+    origin: "https://tictactoereactbyshoron.netlify.app", //"http://localhost:5173/" <= Dont Write link this way
     //methods: ["GET", "POST"]       // The link must change during deployment
   },
 });
