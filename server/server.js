@@ -1,10 +1,11 @@
 const { createServer } = require("http");
 const { Server } = require("socket.io");
 
+const PORT = process.env.PORT || 8000
 const httpServer = createServer();
 const io = new Server(httpServer, {
   cors: {
-    origin: "http://localhost:5173", //"http://localhost:5173/" <= Dont Write link this way
+    origin: "http://tictactoereactbyshoron.netlify.app", //"http://localhost:5173/" <= Dont Write link this way
     //methods: ["GET", "POST"]       // The link must change during deployment
   },
 });
@@ -113,4 +114,4 @@ function winCheck(arr) {
   else return { haveWon: false };
 }
 
-httpServer.listen(3000, () => console.log("Server Started")); //Here Port has to be changed during deployment
+httpServer.listen(PORT, () => console.log("Server Started"));
